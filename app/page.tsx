@@ -1,9 +1,11 @@
+import { categories } from "@/constants"
 
 
-export default function Home() {
+async function Home() {
+  const news: NewsResponse = await fetchNews(categories.join(','))
   return (
-    <main>
+    <div>
       homePage
-    </main>
+    </div>
   )
 }
